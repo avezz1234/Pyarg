@@ -15,7 +15,7 @@ classdesc = {
     "Archer":   "You have picked Archer; Balanced. Moderate health and damage.",
     "Canoneer": "You have picked Canoneer; Slow but powerful. High damage, low health."
 }
-
+#item lists
 items = {
     "Poison Dagger": {"damage": 15, "effect": "poison",    "desc": "Poisons enemies for 5dmg/turn for 3 turns."},
     "Iron Sword":    {"damage": 25, "effect": None,         "desc": "Reliable extra damage."},
@@ -73,7 +73,7 @@ def gain_xp(amount):
 
 def scale_enemy(name):
     base = enemy_pool[name]
-    # enemies scale at 10% per level vs player's 20% — they fall behind over time
+    # enemies scale at 10% per level vs player's 20%, they fall behind over time
     scale = 1 + (player["level"] - 1) * 0.10
     return {
         "name": name,
